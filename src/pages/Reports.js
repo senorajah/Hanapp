@@ -1,19 +1,34 @@
 import React  from 'react'
-// import Excel from '../Excel/Excel'
-// import './bootstrap/dist/css/bootstrap.min.css';
+import { Button } from 'bootstrap';
 import '../css/Reports.css'
 import { render } from '@testing-library/react'
 import { Component } from "react";
-import { excelData } from '../components/Data/Data';
+import { columns, excelData } from '../components/Data/Data';
+import {pdfData} from '../components/Data/Data';
 import ReactHTMLTableTOExcel from 'react-html-table-to-excel';
+import jsPDF from 'jspdf';
+import autoTable from 'jspdf-autotable'
+
 
 
 export default  class Reports extends Component {
+
+    //generate to pdf
+    pdfGenerate=()=>{
+        var doc = new jsPDF()
+        doc.text("REPORT",20,10)
+        doc.autoTable({
+            columns:columns.map(col=>({...col, dataKey:col.field})),
+            body:excelData
+        })
+
+        doc.save('reports.pdf')  
+    }
     render(){
         console.warn(excelData)
   return(
     <>
-        {/* <h5 className="header" >Data Export Excel </h5> */}
+
     <section className="reportContainer">
             <div className="content">
                 <table className="tableTXT" id='empTable'>
@@ -38,17 +53,19 @@ export default  class Reports extends Component {
                             })}
 
                         </tbody>
-                </table>
-                    
-                <ReactHTMLTableTOExcel
-                className="exBtn"
-                table="empTable"
-                filename="emp excel file"
-                sheet="Sheet"
-                buttonText="Export to Excel"
-                />
-                           
+                </table>                 
             </div>
+                {/*excel button */}
+                <ReactHTMLTableTOExcel
+                    className="exBtn"
+                    table="empTable"
+                    filename="emp excel file"
+                    sheet="Sheet"
+                    buttonText="Export to Excel"
+                    />   
+
+                {/*pdf button */}
+            <button  onClick={this.pdfGenerate} className='pdfBtn'> <br/>Export to PDF</button>
             
         </section>          
                                       

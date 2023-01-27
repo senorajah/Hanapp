@@ -133,7 +133,7 @@ export const UpdatesData = [
   },
 ];
 
- // excel export data
+
 
  export const excelData = [
   
@@ -158,4 +158,11 @@ export const UpdatesData = [
     time: "2 hours ago",
   },
 
+];
+
+
+export const columns = [
+  {title: "name", field:"name",},
+  {title: "notification", field:"noti",},
+  {title: "time", field:"time",},
 ];

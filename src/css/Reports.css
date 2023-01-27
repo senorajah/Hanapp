@@ -55,17 +55,17 @@ td {
     color: green;
     font-weight: bold;
     background-color: #e4f5ec;
-    border: 2px solid darkgreen;
-    border-radius: 5%;
+    border: 1px solid darkgreen;
+    
     
 }
 .pdfBtn
 {
-    color: red;
+    color: darkred;
     font-weight: bold;
     background-color: #bc667e;
-    border: 2px solid darkred;
-    border-radius: 5%;
-    padding-left: 5rem;
+    border: 1px solid darkred;
+    
+    
     
 }
