@@ -1,0 +1,68 @@
+.MainDash{
+    /* padding-top: 1rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.MainDash > h1 > span{
+   color: rgba(62, 65, 255, 0.812);
+}
+
+.MainDash > h1{
+    font-size: 200%;
+}
+
+@media screen and (max-width: 1200px) {
+    .MainDash{
+        justify-content:flex-start;
+        margin-top: 2rem;
+        
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .MainDash h1{
+        font-size: 2rem;
+        margin-top: 2rem;
+        width: 380%;
+        text-align: center;
+    }
+
+    
+}
+@media screen and (max-width: 680px)
+{
+    .MainDash h1{
+        /* font-size: 2rem;
+        margin-top: 2rem;
+        width: 20%;
+        text-align: start;
+        margin-left: 5rem; */
+        width: 50%;
+        margin-left: 13rem;
+        
+        
+    }
+}
+
+@media screen and (max-width: 500px)
+{
+    .MainDash{
+        font-size: 100%;
+        justify-content:flex-start;
+        margin-top: 2rem;
+        
+    }
+}
+
+@media screen and (max-width: 400px)
+{
+    .MainDash > h1{
+       font-size: 90%;
+       left: -100%;
+       
+    
+    }
+}
