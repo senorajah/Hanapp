@@ -1,23 +1,12 @@
-
-/* .header{
-    margin-right: -6in;
-} */
 .reportContainer{ 
-    /* container for the table */
-    padding-top: 8rem;
-    padding-left: 10rem;
+    display: flex;
 }
-.nameTD{
-    
-    padding-right: 5rem;
-}
-.notiTD{
-    
-    padding-right: 5rem;
-}
-
-.timeTD{
-    padding-left: 5rem;
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
 }
 
 thead,
@@ -50,14 +39,27 @@ td {
     text-align: center;
 }
 
+.buttons{
+    position:absolute;
+    top: 20%;
+    margin-left: 28%;
 
+}
+.exportTo{
+    margin-left: 25px;
+    margin-bottom: 0px;
+    
+}
 .exBtn{
-    color: green;
+    color: rgb(1, 84, 1);
     font-weight: bold;
-    background-color: #e4f5ec;
+    background-color: #00a74e;
     border: 1px solid darkgreen;
-    
-    
+    cursor: pointer;  
+    border-radius: 5px;
+    margin-right: 5px;
+    font-size: large;
+    box-shadow: 0 9px rgb(45, 43, 43); 
 }
 .pdfBtn
 {
@@ -65,7 +67,22 @@ td {
     font-weight: bold;
     background-color: #bc667e;
     border: 1px solid darkred;
-    
-    
-    
+    cursor: pointer;
+    margin-left: 5px;
+    border-radius: 5px;
+    font-size: large; 
+    box-shadow: 0 9px rgb(45, 43, 43); 
 }
+.pdfBtn:hover {background-color: #600707}
+
+.pdfBtn:active {
+  background-color: #921414;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);}
+
+.exBtn:hover {background-color: #053407}
+
+.exBtn:active {
+  background-color: #063108;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);}

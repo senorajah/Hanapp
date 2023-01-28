@@ -131,35 +131,13 @@ export const UpdatesData = [
     noti: "has joined the hanapp community as a employer.",
     time: "2 hours ago",
   },
-];
-
-
-
- export const excelData = [
-  
   {
-    name: "Sasuke Uchiha",
+    img: img2,
+    name: "Gustan Otto",
     noti: "has joined the hanapp community as a employer.",
-    time: "25 seconds ago",
+    time: "2 minutes ago",
   },
-  {
-    name: "Hinata Hyuga",
-    noti: "has joined the hanapp community as a student job seeker.",
-    time: "30 minutes ago",
-  },
-  {
-    name: "Naruto Uzumaki",
-    noti: "has joined the hanapp community as a student job seeker.",
-    time: "2 hours ago",
-  },
-  {
-    name: "Madara Uchiha",
-    noti: "has joined the hanapp community as a employer.",
-    time: "2 hours ago",
-  },
-
 ];
-
 
 export const columns = [
   {title: "name", field:"name",},
